@@ -3,27 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>FILM FREE</title>
   </head>
   <body>
-     <header>
-    <!--   barra de navegacion -->
-      <nav>
-        <ul>
-          <li><a href="index.html"> LOGO DE LA PAGINA</a>
-          </li>
-          <li>
-            <a href="index.html">HOME</a>
-            </li>
-          <li>
-            <a href="aboutUs.html">ABOUT US</a>
-            </li>
-          <li> <a href="donations.html">DONATIONS</a>
-          </li>
-          </ul>
+    <header class="nav-primary">
+      <!--   barra de navegacion -->
+      <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="aboutUs.html">ABOUT US</a>
+        <a href="history.html">HISTORY</a>
+        <a href="donations.html">DONATIONS</a>
+        <a href="https://www.linkedin.com/in/gerokramar/">LINKEDLN</a>
+        <div class="animation start-home"></div>
       </nav>
+      <!--  Pelicula Principal de pagina -->
+
+      <div class="flex-container">
+        <div id="col-1" class="flex-item">
+          <h1>Avengers End Game<span style="color: #d94f5c">.</span></h1>
+          <p>
+            Los Vengadores restantes deben encontrar una manera de recuperar a
+            sus aliados para un enfrentamiento épico con Thanos, el malvado que
+            diezmó el planeta y el universo.
+          </p>
+          <p>Director: Panthony y Joe Russo</p>
+          <h2>Duracion: 3h 02m</h2>
+        </div>
+
+        <div class="flex-item">
+          <div class="card">
+            <img src="./Assets/Img/PosterOficcial2.png" alt="" />
+            
+          </div>
+        </div>
+      </div>
     </header>
     <!-- seccion principal -->
     <section>
@@ -42,7 +57,6 @@
     <footer>
       <p>aca estaran los datos del footer</p>
     </footer>
-    
 
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>

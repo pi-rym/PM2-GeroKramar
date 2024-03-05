@@ -29,4 +29,14 @@ const tempData = [
     poster:
       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
+  {
+    title: "Advenger: End game",
+    year: 2019,
+    director: "PAnthony y Joe Russo",
+    duration: "3h 01min",
+    genre: ["Action", "Adventure", "Drama", "Fantasy"],
+    rate: 8.4,
+    poster:
+      "https://www.cinemascomics.com/wp-content/uploads/2019/04/avengers-endgame-imax-1165442.jpeg",
+  },
 ];
