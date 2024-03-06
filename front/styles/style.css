@@ -1,3 +1,87 @@
+
+body {
+    font-size: 12px;
+    font-family: sans-serif;
+    background: #2c3e50;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.card {
+    flex: 0 0 auto; /* The card won't grow or shrink, it will be based on content */
+    width: max-content; /* The width of the card will fit the largest item */
+    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+    position: relative;
+    padding: auto;
+    margin: auto;
+    border-radius: 15px;
+
+    /* Removed fixed height to allow the card to fit the content */
+}
+
+.card img {
+    width: 100%; /* Image width will match the card */
+    height: auto; /* Image height will scale proportionally */
+    display: block; /* Removes extra space below the image */
+}
+
+.descriptions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.7);
+    width: 100%;
+    height: 100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+    font-size: 0.9rem;
+}
+
+.card:hover .descriptions {
+    clip-path: circle(75%);
+}
+
+.card h1, .card p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.5rem; /* Adjusted title font size */
+    font-size: 1rem; /* Adjusted paragraph font size */
+}
+
+.card button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff3838;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.card button:hover {
+    background-color: #e63629; /* Darkened button background on hover */
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
 .nav-primary{
     background-image: url("/Assets/Img/background-1.jpg");
     background-size: cover;
@@ -6,6 +90,7 @@
     padding-top: 0%;
     opacity: 70%;
     height: 500px;
+    background-color: #3b3b3b85;
     
     
 }
@@ -21,11 +106,13 @@
 }
 
 #col-1 {
+   
     h1{
     color: aliceblue;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 50px;
+    
     }
     h2{
         margin-top: 45px;
@@ -41,7 +128,7 @@
     }
 }
 
-.card-1 
+.card1 
  {
     position: relative;
     width: max-content;
@@ -58,8 +145,8 @@
  
   }
   
-  .card-1::before,
-  .card-1::after {
+  .card1::before,
+  .card1::after {
     position: absolute;
     content: "";
     width: 20%;
@@ -73,28 +160,28 @@
     transition: all 0.5s;
   }
   
-  .card-1::before {
+  .card1::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
   }
   
-  .card-1::after {
+  .card1::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
   }
   
 
-  .card-1:hover::before,
-  .card-1:hover:after {
+  .card1:hover::before,
+  .card1:hover:after {
     width: 100%;
     height: 100%;
     border-radius: 15px;
     transition: all 0.5s;
   }
   
-  .card-1:hover:after {
+  .card1:hover:after {
     content: "Ver Ahora";
     color: aliceblue;
  }
@@ -201,11 +288,4 @@ nav .start-contact, a:nth-child(5):hover~.animation {
 	width: 120px;
 	left: 470px;
 	background-color: rgba(96, 24, 24, 0.607);
-}
-
-body {
-	font-size: 12px;
-	font-family: sans-serif;
-	background: #2c3e50;
-
 }

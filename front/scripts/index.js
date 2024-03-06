@@ -34,32 +34,42 @@ class Repository {
 const repository = new Repository();
 
 //mapeo de funcion
-const mapCards= card=>{
-    const divDescrip = document.createElement('div');
-    divDescrip.className = 'descriptions';
-    const h2 = document.createElement('h2');
-    h2.textContent = `${card.title}`
-    const imgCard = document.createElement('img');
-    imgCard.setAttribute('src', card.poster);
-    const p = document.createElement('p')
-    p.textContent = `
-    year: ${card.year}
-    director: ${card.director}
-    duration: ${card.duration}
-    `
-    const btn = document.createElement('button');
-    const i = document.createElement('i');
-    i.className = 'fab';
-    i.classList.add('fa-youtube');
+const mapCards = card => {
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
 
-    divDescrip.appendChild(imgCard);
-    divDescrip.appendChild(h2);
-    divDescrip.appendChild(p);
-    btn.appendChild(i);
-    divDescrip.appendChild(btn);
-    return divDescrip;
-}
+    const img = document.createElement('img');
+    img.src = card.poster; // Asegúrate de que 'card.poster' es la URL de la imagen
+    img.alt = `Poster de ${card.title}`;
 
+    const descriptions = document.createElement('div');
+    descriptions.className = 'descriptions';
+
+    const h1 = document.createElement('h1');
+    h1.textContent = card.title;
+
+    const p1 = document.createElement('p');
+    p1.textContent = `Year: ${card.year}` 
+    const p2 = document.createElement('p');
+    p2.textContent = `Director: ${card.director}` 
+    const p3 = document.createElement('p');
+    p3.textContent = `Duration: ${card.duration}`;
+    
+
+    const button = document.createElement('button');
+    button.textContent = 'Ver Ahora';
+
+    descriptions.appendChild(h1);
+    descriptions.appendChild(p1);
+    descriptions.appendChild(p2);
+    descriptions.appendChild(p3);
+    descriptions.appendChild(button);
+
+    cardElement.appendChild(img);
+    cardElement.appendChild(descriptions);
+
+    return cardElement;
+};
 // Creacion de tarjetas en el DOM
 const renderCard = (movies) => {
     const contentCards = document.getElementById('content-cards');
