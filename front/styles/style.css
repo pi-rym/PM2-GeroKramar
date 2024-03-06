@@ -289,3 +289,31 @@ nav .start-contact, a:nth-child(5):hover~.animation {
 	left: 470px;
 	background-color: rgba(96, 24, 24, 0.607);
 }
+/* Responsive design adjustments */
+@media only screen and (max-width: 768px) {
+    .card {
+        min-width: 100%; /* Cards will take full width on smaller screens */
+        max-width: 100%; /* Limiting card's max width */
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+
+    .wrapper {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Align cards in the middle */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 10px; /* Slightly reduce font size for very small devices */
+    }
+
+    .descriptions {
+        padding: 10px; /* Reduce padding for descriptions on small devices */
+        font-size: 0.8rem; /* Reduce description text size on small devices */
+    }
+
+    .card h1, .card p {
+        font-size: 1rem; /* Adjust heading and paragraph font size on small devices */
+    }
+}
