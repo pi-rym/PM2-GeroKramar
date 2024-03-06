@@ -3,6 +3,7 @@ body {
     font-size: 12px;
     font-family: sans-serif;
     background: #2c3e50;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -289,31 +290,61 @@ nav .start-contact, a:nth-child(5):hover~.animation {
 	left: 470px;
 	background-color: rgba(96, 24, 24, 0.607);
 }
-/* Responsive design adjustments */
-@media only screen and (max-width: 768px) {
-    .card {
-        min-width: 100%; /* Cards will take full width on smaller screens */
-        max-width: 100%; /* Limiting card's max width */
-        margin: 10px 0; /* Adjust margin for vertical stacking */
+
+@media only screen and (max-width: 992px) {
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .wrapper {
-        flex-direction: column; /* Stack the cards vertically */
-        align-items: center; /* Align cards in the middle */
+    .navbar a {
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .nav-primary {
+        height: auto; /* Adjust height for smaller screens */
+        background-position: top center; /* Keep background image focused on the center at the top */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust header and navbar for mobile devices */
+    .nav-primary {
+        padding-top: 0;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .flex-container,
+    .flex-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flex-item {
+        padding-left: 0;
+        margin-left: 0;
     }
 }
 
 @media only screen and (max-width: 480px) {
     body {
-        font-size: 10px; /* Slightly reduce font size for very small devices */
+        font-size: 10px; /* Smaller font size on very small devices */
     }
 
-    .descriptions {
-        padding: 10px; /* Reduce padding for descriptions on small devices */
-        font-size: 0.8rem; /* Reduce description text size on small devices */
-    }
-
-    .card h1, .card p {
-        font-size: 1rem; /* Adjust heading and paragraph font size on small devices */
+    .navbar a {
+        padding: 5px;
+        font-size: 14px; /* Adjust font size for very small devices */
     }
 }
