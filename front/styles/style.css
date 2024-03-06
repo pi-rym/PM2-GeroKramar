@@ -41,7 +41,7 @@
     }
 }
 
-.card 
+.card-1 
  {
     position: relative;
     width: max-content;
@@ -58,8 +58,8 @@
  
   }
   
-  .card::before,
-  .card::after {
+  .card-1::before,
+  .card-1::after {
     position: absolute;
     content: "";
     width: 20%;
@@ -73,28 +73,28 @@
     transition: all 0.5s;
   }
   
-  .card::before {
+  .card-1::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
   }
   
-  .card::after {
+  .card-1::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
   }
   
 
-  .card:hover::before,
-  .card:hover:after {
+  .card-1:hover::before,
+  .card-1:hover:after {
     width: 100%;
     height: 100%;
     border-radius: 15px;
     transition: all 0.5s;
   }
   
-  .card:hover:after {
+  .card-1:hover:after {
     content: "Ver Ahora";
     color: aliceblue;
  }
