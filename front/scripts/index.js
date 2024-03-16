@@ -10,7 +10,7 @@ const axios = require('axios')
 
 const fetchMoviesCards = async() => {
     try {
-      const response = await axios.get('https://students-api.up.railway.app/movies');
+      const response = await axios.get('http://localhost:3000/movie');
       renderCard(response.data); // Asegúrate de pasar response.data en lugar de solo response
     } catch (error) {
         console.log('No se pudieron cargar las cards')
