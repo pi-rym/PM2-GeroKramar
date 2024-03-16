@@ -4,6 +4,6 @@ const router = Router();
 
 
 
-router.get('/movie', movieRouter)
+router.use('/movie', movieRouter)
 
 module.exports = router;
