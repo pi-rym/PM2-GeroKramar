@@ -1,6 +1,0 @@
-
-const getAllMovies = (req, res)=>{
-    res.status(200).send("El EndPoint funciona correctamente!");
-}
-
-module.exports = getAllMovies;
