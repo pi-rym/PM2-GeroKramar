@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const movieController = require ('../controller/') // falta la ruta
+const movieController = require("../controller/") 
 
 const movieRouter =  Router();
 movieRouter.get('/', movieController);
