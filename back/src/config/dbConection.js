@@ -1,6 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
 
-const URI = 'mongodb+srv://Gerokramar:wN2qTuwKAgTmoZXf@cluster0.qxnfigy.mongodb.net/MoviesDb?retryWrites=true&w=majority&appName=Cluster0'
+const URI = process.env.URI
 
 const dbConection = async ()=> {
     try { 

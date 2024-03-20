@@ -10,6 +10,15 @@ const getAllMovies = async (req, res)=>{
     }
    
 }
+const postMovieController = async (req, res) => {
+    try {
+        // Supongo que 'req.body' contiene la información de la película
+        await movieService.postMovie(req.body);
+        res.status(201).json({message: 'Pelicula creada con exito'});
+    } catch (error) {
+        res.status(400).json({error: error.message});
+    }
+};
 
-module.exports = getAllMovies
+module.exports = { getAllMovies , postMovieController}
   
