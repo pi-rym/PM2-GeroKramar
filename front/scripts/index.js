@@ -3,15 +3,12 @@ const renderCard = require('./renderCard')
 const axios = require('axios')
 
 
-// $.get('https://students-api.up.railway.app/movies', function(response) {
-//     renderCard(response);
-// });
-
 
 const fetchMoviesCards = async() => {
     try {
       const response = await axios.get('http://localhost:3000/movie');
       renderCard(response.data); // Asegúrate de pasar response.data en lugar de solo response
+      console.log(response.data);
     } catch (error) {
         console.log('No se pudieron cargar las cards')
         console.log(error);

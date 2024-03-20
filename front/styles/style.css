@@ -14,23 +14,23 @@ body {
 }
 
 .card {
-    flex: 0 0 auto; /* The card won't grow or shrink, it will be based on content */
-    width: max-content; /* The width of the card will fit the largest item */
+    flex: 0 1 auto; /* La tarjeta puede crecer hasta el max-width pero también puede encogerse */
+    width: 100%; /* Ahora la tarjeta intentará ocupar todo el espacio disponible hasta su contenedor */
+    max-width: 360px; /* Establece un ancho máximo para las tarjetas */
+    min-width: 280px; /* Establece un ancho mínimo para las tarjetas, ajusta según necesidad */
     box-shadow: 0px 4px 7px rgba(0,0,0,.5);
     transition: all .5s cubic-bezier(.8,.5,.2,1.4);
     overflow: hidden;
     position: relative;
-    padding: auto;
-    margin: auto;
+    padding: 20px; /* Ajuste el padding según sea necesario, 'auto' no es un valor válido para padding */
+    margin: 20px auto; /* Asegura un margen consistente alrededor de las tarjetas */
     border-radius: 15px;
-
-    /* Removed fixed height to allow the card to fit the content */
 }
 
 .card img {
-    width: 100%; /* Image width will match the card */
-    height: auto; /* Image height will scale proportionally */
-    display: block; /* Removes extra space below the image */
+    width: 100%; /* La anchura de la imagen coincidirá con la de la tarjeta */
+    height: auto; /* La altura de la imagen se escalará proporcionalmente */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
 }
 
 .descriptions {
