@@ -84,8 +84,6 @@ const renderCard = (movies) => {
     });
 }
 
-module.exports = {
-    renderCard, 
-    Card
+module.exports = 
+    renderCard;
 
-}

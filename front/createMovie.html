@@ -37,7 +37,7 @@
             <div class="card-body">
               <div class="container text-center">
                 <div class="row align-items-start ">
-                  <form action="" method="post"></form>
+                  <form action="" method="post" id="movieForm"></form>
                   <div class="col">
                     <!-- titulo de la pelicula -->
                 <label class="form-label" for="title">
@@ -232,8 +232,8 @@
                   name="poster"
                   placeholder="Ingrese la URL del poster"
                 />
-                <button type="submit" class="btn btn-primary  mt-4" style="background-color: rgb(49, 178, 66);">Enviar</button>
-                <button type="submit" class="btn btn-primary  mt-4" style="background-color:rgb(193, 47, 47)"  >borrar</button>
+                <button type="submit" id="btnSubmit" class="btn btn-primary  mt-4" style="background-color: rgb(49, 178, 66);">Enviar</button>
+                <button type="button" id="btnClear" class="btn btn-primary  mt-4" style="background-color:rgb(193, 47, 47)"  >borrar</button>
               </form>
             </div>
             <div class="card-footer text-body-secondary"></div>
@@ -251,5 +251,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script src="./public/films.js"></script>
   </body>
 </html>

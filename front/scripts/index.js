@@ -4,6 +4,7 @@ const axios = require('axios')
 
 
 
+
 const fetchMoviesCards = async() => {
     try {
       const response = await axios.get('http://localhost:3000/movie');
@@ -16,6 +17,8 @@ const fetchMoviesCards = async() => {
 }
 
 fetchMoviesCards()
+
+
 
 
 // https://students-api.up.railway.app/movies
